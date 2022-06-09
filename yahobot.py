@@ -1,6 +1,7 @@
 from msilib.schema import MsiAssembly
 import discord
 import asyncio
+import os
 client = discord.Client()
 
 @client.event
@@ -90,4 +91,4 @@ async def on_message(message):
             await msg.delete()
         else:
             await message.channel.send("올바른 값을 입력해주세요.")
-client.run('OTgwODQ0OTc2ODA2MTg3MDY4.G4vKhT.DfNdbOP-8jaH6kai_3Lk0QB9aUkkgbeSpcaKPw') #토큰
+client.run(os.environ['token'])
